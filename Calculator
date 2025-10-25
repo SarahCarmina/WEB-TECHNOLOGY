@@ -102,7 +102,7 @@ font-family: fantasy;
     <button class="operator" onclick="squareRoot()">√</button>
     <button class="operator" onclick="square()">x<sup>2</sup></button>
     <button onclick="clearDisplay()">C</button>
-    <div class="Name"><p>Sarah C D'Almeida </p><p>4MW23CS137/p></div>
+    <div class="Name"><p>Sarah C D'Almeida </p><p>4MW23CS137</p></div>
     
   </div>
 </div>
