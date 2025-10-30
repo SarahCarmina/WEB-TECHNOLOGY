@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Script Tasks</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    p,
+    ul,
+    div {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f4f4f4;
+    }
+
+    #name{
+        font-weight: 900;
+        background: linear-gradient(to right, pink, yellow);
+        color: royalblue;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  ;
+    }
+</style>
+
+<body>
+    <p id="name"><b>SARAH CARMINA DALMEIDA <br> 4MW23CS137</b>
+    </p>
+    <h2>Append Content</h2>
+    <p id="para">This is an existing Paragraph.</p>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="appendBtn">Append Content</button>
+    <h2>Animate Element</h2>
+    <div class="box" id="animateBox"></div>
+    <button id="animateBtn">Animate Box</button>
+    <script>
+        $(document).ready(function () {
+            let itemCount = $("#list li").length;
+
+            $('#appendBtn').click(() => {
+                itemCount++;
+                $('#para').append(`Appened Text ${itemCount}.`);
+                $('#list').append(`<li> Item ${itemCount}</li>`);
+            });
+        });
+        $('#animateBtn').click(() => {
+            $('#animateBox').css({ width: '100px', height: '100px', 'background-color': '#f4f4f4' })
+                .animate({ width: '150px', height: '150px', height: '150px' }, 500,
+                    function () {
+                        $(this).css('background-color', 'lightblue');
+                    });
+        });
+
+
+    </script>
+</body>
+
+</html>
