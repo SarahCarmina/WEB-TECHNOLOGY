@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume - Student</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background: blueviolet;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: #34495e;
+        }
+
+        nav a.active {
+            background: #3498db;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 20px;
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            background-color: salmon;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 15px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table td:first-child {
+            font-weight: bold;
+            color: #2c3e50;
+            width: 180px;
+        }
+
+        /* Lists */
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            list-style-type: none;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Skills */
+        .skill {
+            margin-bottom: 15px;
+        }
+
+        .skill-bar {
+            background: #e0e0e0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .skill-level {
+            background: #3498db;
+            height: 100%;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        /* Contact Form */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-link active" onclick="showPage('home')">Home</a>
+        <a href="#" class="nav-link" onclick="showPage('resume')">Resume</a>
+        <a href="#" class="nav-link" onclick="showPage('biodata')">Bio-Data</a>
+        <a href="#" class="nav-link" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="header">
+                <h1>Sarah C DAlmeida - 4MW23CS137</h1>
+                <p>Computer Science Engineering Student</p>
+                <p>📧 sarah.23cs137@sode-edu.in | 📱 +91 9008799607</p>
+            </div>
+
+            <div class="section">
+                <h2>About Me</h2>
+                <p>
+                    Hey! I'm a third-year Computer Science Engineering student passionate about 
+                    web development and programming. I love building projects and learning new technologies. 
+                    Currently focusing on full-stack development and looking for internship opportunities.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>What I'm Learning</h2>
+                <ul>
+                    
+                    <li>🐍 Python Programming</li>
+                    <li>🗄️ Database Management</li>
+                    <li>☕ Java & OOP Concepts</li
+                    <li>📚 Data Structures & Algorithms</li>
+                    <li>💻 Full Stack Web Development</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RESUME PAGE -->
+        <div id="resume" class="page">
+            <h2>Resume</h2>
+
+            <div class="section">
+                <h3>Education</h3>
+                <p><strong>Bachelor of Engineering in Computer Science</strong></p>
+                <p class="date">SMVITM Bantakal | 2023 - 2027</p>
+                <p>Current CGPA: 9/10</p>
+                <br>
+                <p><strong>12th Standard</strong></p>
+                <p class="date">GIS Kuwait | 2023</p>
+                <p>Percentage: 87.4%</p>
+                <br>
+                <p><strong>10th Standard</strong></p>
+                <p class="date">GIS Kuwait | 2021</p>
+                <p>Percentage: 95.2%</p>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills</h3>
+                
+                <div class="skill">
+                    <strong>C/C++ Programming</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%">90%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>HTML/CSS/JavaScript</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>Java</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%">75%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>Python</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%">85%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>MongoDB</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 55%">55%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Projects</h3>
+                <p><strong>1.Smart Fitness Tracker</strong></p>
+                <p class="date">Technologies: React,NodeJS,ExpressJS,MongoDB</p>
+                <p>Developed a smart fitness tracker for fitness enthusiasts.</p>
+                <br>
+                <p><strong>2. Personal Portfolio Website</strong></p>
+                <p class="date">Technologies: HTML, CSS, JavaScript</p>
+                <p>Created a responsive portfolio website showcasing my skills and projects.</p>
+                <br>
+                <p><strong>2. Learnify</strong></p>
+                <p class="date">Technologies: React,NodeJS,ExpressJS,MongoDB</p>
+                <p>AI powered tool to generate summary,flashcard and quiz from notes.</p>
+            </div>
+
+            <div class="section">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Python Programming - Coursera</li>
+                    <li>Web Development Bootcamp - Udemy</li>
+                    <li>Data Structures & Algorithms - Apna College</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>🏆 Won 4th Prize in College Web Design Event 2024</li>
+                    <li>⭐ Student Coordinator - Technical Club</li>
+                    <li>📜 Published paper in college journal</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BIO-DATA PAGE -->
+        <div id="biodata" class="page">
+            <h2>Bio-Data</h2>
+
+            <table>
+                <tr>
+                    <td>Full Name</td>
+                    <td>Sarah C DAlmeida</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>23rd April 2005</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>20 Years</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td>Indian</td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td>Christianity</td>
+                </tr>
+                <tr>
+                    <td>Languages Known</td>
+                    <td>Hindi, English, Konkani</td>
+                </tr>
+                <tr>
+                    <td>Permanent Address</td>
+                    <td>Behind St.Joseph's Church,Belman-576111</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>sarah.23cs137@sode-edu.in</td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>+91 9008799607</td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>Coding, Cooking, Playing Badminton</td>
+                </tr>
+            </table>
+
+            <div class="section">
+                <h3>Career Objective</h3>
+                <p>
+                    To secure an internship position in a reputed company where I can utilize my 
+                    technical skills and knowledge. Looking forward to learning from experienced 
+                    professionals and contributing to meaningful projects.
+                </p>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact" class="page">
+            <h2>Contact Me</h2>
+
+            <div class="section">
+                <h3>Get in Touch</h3>
+                <p><strong>📧 Email:</strong> sarah.23cs137@sode-edu.in</p>
+                <p><strong>📱 Phone:</strong> +91 9008799607</p>
+                <p><strong>📍 Location:</strong> Belman, Karnataka, India</p>
+                <p><strong>💼 LinkedIn:</strong> linkedin.com/in/sarahdalmeida</p>
+                <p><strong>💻 GitHub:</strong> github.com/SarahCarmina</p>
+            </div>
+
+            <div class="section">
+                <h3>Send a Message</h3>
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                <button onclick="sendMessage()">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sarah C DAlmeida.</p>
+    </footer>
+
+    <script>
+        // Function to show different pages
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Remove active from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Add active to clicked nav link
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Contact form function
+        function sendMessage() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thanks ' + name + '! Your message has been sent successfully!');
+                // Clear form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please fill all the fields!');
+            }
+        }
+    </script>
+</body>
+</html>
