@@ -1,11 +1,8 @@
+/*https://sarahonlineform.gamer.gd/?i=1*/
 <?php
 // index.php
 // This file contains the form and client-side logic.
 // It uses AJAX to POST to submit.php and shows the formatted result
-
-
-
-//https://sarahonlineform.gamer.gd/?i=1//
 ?>
 <!doctype html>
 <html lang="en">
@@ -139,4 +136,5 @@
 
 </body>
 </html>
+
 
